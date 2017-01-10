@@ -1,0 +1,46 @@
+    <!DOCTYPE html>
+    <html lang='zh-CN'>
+    <head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src='http://libs.baidu.com/jquery/1.9.0/jquery.js'></script>
+    </head>
+    <body>
+    <input type="text" placeholder="input date to save">  
+<button>save</button>  
+    <div class='box'>1111111</div>
+    <script type='text/javascript'>
+    $(function () {
+        $('.box')[0].onclick=heheda;
+        function heheda(){
+            console.log('heheda')
+        }
+
+        var ele = $._data($('.box')[0], 'events');
+        console.log(ele);
+        // console.log(ele["click"]);
+        if (ele && ele["click"]) {
+            alert('有绑定事件！');
+        }
+        else {
+            alert('无绑定事件！');
+        }
+    });
+
+
+(function(D){  
+    var val = D.getElementsByTagName("input")[0],  
+      btn = D.getElementsByTagName("button")[0];  
+    btn.onclick = function(){  
+      var value = val.value;  
+      if(!value) return;  
+      localStorage.setItem("key", val.value);  
+    };  
+    window.addEventListener("storage", function(e){  
+      console.log(e);  
+    });  
+  })(document);  
+    </script>
+    </body>
+    </html>
+

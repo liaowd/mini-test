@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>   
+    <script src="../../myLib/zepto-1.1.6/src/zepto.js"></script>
+    <script src="../../myLib/zepto-1.1.6/src/event.js"></script>
+    <script src="../../myLib/zepto-1.1.6/src/touch.js"></script>
+    <script type="text/javascript" src='../../myLib/vue.js'></script>
+    <style>
+        body{
+            background-color:#999;
+            /*margin:0;*/
+        }
+    </style>
+</head>
+<body>
+<input type="button" name="huidiao" class="huidiao">
+
+<section class="normal">
+    <div class="div1">普通看起来不错1</div>
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+    <div class="div2">普通看起来不错2</div>    
+</section>
+
+<script type="text/javascript">
+	function bottomRefresh(callback){
+		var bodyRect=document.body.getBoundingClientRect();
+		var bodyMarginBottom= parseInt(getComputedStyle(document.body,'margin-bottom').marginBottom);
+		if( bodyRect.bottom + bodyMarginBottom <= screen.availHeight){
+			if(typeof(callback)=='function'){
+				callback();
+			}else{
+				console.warn('bottomRefresh必须传入一个函数作为参数')
+			}
+		}
+	}
+	function scrollEvent(){
+		bottomRefresh(function(){
+			console.log('到底了')
+			// 在这里加入拉到底刷新的动作
+
+
+		})
+	}
+	window.onscroll=scrollEvent;
+
+	// 另一种实现方式
+	// $(document).scroll(function(){
+	// 	bottomRefresh(function(){
+	// 		console.log('到底了')
+	// 	})
+	// })
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+.flex{
+	display: flex;
+	/*margin-top:15px;*/
+	flex-direction: row;
+	flex-wrap:wrap;
+	align-items: flex-start;
+}
+
+.div1{
+	border:1px solid green;
+}
+
+.div2{
+	border:1px solid red;
+	order:99;
+}
+

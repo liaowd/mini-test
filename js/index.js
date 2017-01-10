@@ -35,3 +35,13 @@ hd(function(){
 	console.log("这是别的事情做完后，回调的函数")
 });
 
+
+// 测试1，函数多次声明
+var x=1,y=2,z=3;
+function add1(n){n=n+1}
+a=add1(x)
+function add1(n){n=n+2}
+b=add1(y)
+console.log(a)
+console.log(b)
+// **************************
